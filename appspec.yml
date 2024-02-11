@@ -1,13 +1,17 @@
 version: 0.0
 os: linux
 files:
-  - source: /tmp/codigo
-    destination: /opt/tomcat
+  - source: /build/libs/holamundo-0.0.1-SNAPSHOT.war
+    destination: /opt/tomcat/webapps
 hooks:
   ApplicationStop:
     - location: codedeploy-scripts/stop.sh
       timeout: 300
       runas: root
+  Beforeinstall:
+    - location: codeploy-scripts/beforeinstall.sh
+    timeout: 300
+    runas: root
   ApplicationStart:
     - location: codedeploy-scripts/start.sh
       timeout: 300
