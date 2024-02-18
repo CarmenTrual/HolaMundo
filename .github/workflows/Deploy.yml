@@ -38,4 +38,4 @@ jobs:
       run: echo "SHA=${{github.sha}}" >> $GITHUB_ENV
 
     - name: Display Github sha
-      run: echo 827dd0b325e87c6c1487f7e5c736638ef7dccd9c
+      run: echo $SHA
