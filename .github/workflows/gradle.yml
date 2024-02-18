@@ -52,7 +52,7 @@ jobs:
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
-        distributions: 'adopt'
+        distribution: 'adopt'
         java-version: '17'
 
     - name: Build with Gradle
